@@ -2,6 +2,7 @@ import numpy as np
 import scipy.linalg as slin
 import scipy.optimize as sopt
 from scipy.special import expit as sigmoid
+import utils
 
 
 def notears_linear(X, lambda1, loss_type, max_iter=100, h_tol=1e-8, rho_max=1e+16, w_threshold=0.3):
@@ -87,7 +88,7 @@ def notears_linear(X, lambda1, loss_type, max_iter=100, h_tol=1e-8, rho_max=1e+1
 
 
 if __name__ == '__main__':
-    from notears import utils
+    #from notears import utils
     utils.set_random_seed(1)
 
     n, d, s0, graph_type, sem_type = 100, 20, 20, 'ER', 'gauss'
